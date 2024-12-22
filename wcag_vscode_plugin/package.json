@@ -1,0 +1,37 @@
+{
+    "name": "wcag-auditor",
+    "displayName": "WCAG Auditor",
+    "description": "Plugin to audit accessibility according to WCAG using a FastAPI microservice created by GovAble.",
+    "version": "1.0.0",
+    "publisher": "GovAble",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "main": "./src/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "wcag.auditHtml",
+                "title": "WCAG Accessibility Audit | Auditar Accesibilidad WCAG"
+            },
+            {
+                "command": "wcag.downloadReport",
+                "title": "Download WCAG Report | Descargar Reporte WCAG "
+            }
+        ]
+    },
+    "dependencies": {
+        "axios": "^1.5.0",
+        "watch": "^0.13.0"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.80.0",
+        "typescript": "^5.0.0"
+    },
+    "scripts": {
+        "watch": "node ./out/extension.js"
+    }
+}
